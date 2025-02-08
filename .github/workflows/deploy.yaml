@@ -31,8 +31,9 @@ jobs:
         uses: Azure/functions-action@v1
         with:
           app-name: azure-test-app # Replace with your Azure Function App name
-          package: .  # The directory containing your function app code
+          package: ./dist/functions  # The directory containing your function app code
           slot-name: stage
+          app-settings: AzureWebJobsStorage=${{ secrets.AZURE_WEBJOBS_STORAGE }}
 
       - name: Logout from Azure
         run: az logout
