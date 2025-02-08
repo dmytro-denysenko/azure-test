@@ -1,7 +1,7 @@
 {
   "name": "azure-test",
   "module": "index.ts",
-  "main": "dist/functions/*.js",
+  "main": "dist/functions/demo-handler.js",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
