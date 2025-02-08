@@ -31,9 +31,9 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{secrets.AZURE_CLIENT_ID}}
-          subscription-id: ${{secrets.AZURE_SUBSCRIPTION_ID}}
-          tenant-id: ${{secrets.AZURE_TENANT_ID}}
+#          client-id: ${{secrets.AZURE_CLIENT_ID}}
+#          subscription-id: ${{secrets.AZURE_SUBSCRIPTION_ID}}
+#          tenant-id: ${{secrets.AZURE_TENANT_ID}}
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy to Azure Functions
@@ -41,7 +41,6 @@ jobs:
         with:
           app-name: azure-test-app
           package: ./azure-test.zip
-          slot-name: stage
 
       - name: Logout from Azure
         run: az logout
