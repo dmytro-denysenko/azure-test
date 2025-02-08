@@ -27,10 +27,9 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-#      - name: Deploy to Azure Functions
-#        uses: Azure/functions-action@v1
-#        with:
-#          app-name: azure-test  # Replace with your Azure Function App name
-#          slot-name: staging  # Use "staging" if deploying to a staging slot
-#          package: .  # The directory containing your function app code
+      - name: Deploy to Azure Functions
+        uses: Azure/functions-action@v1
+        with:
+          app-name: demo-handler  # Replace with your Azure Function App name
+          package: .  # The directory containing your function app code
 
