@@ -32,3 +32,7 @@ jobs:
         with:
           app-name: azure-test-app # Replace with your Azure Function App name
           package: .  # The directory containing your function app code
+          slot-name: stage
+
+      - name: Logout from Azure
+        run: az logout
