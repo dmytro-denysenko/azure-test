@@ -41,6 +41,7 @@ jobs:
         with:
           app-name: azure-test-app
           package: ./azure-test.zip
+          slot-name: dev
 
       - name: Logout from Azure
         run: az logout

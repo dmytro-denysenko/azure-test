@@ -2,7 +2,8 @@ import { app, HttpHandler, HttpRequest, InvocationContext } from "@azure/functio
 
 app.http("demo-handler", {
   methods: ["GET", "POST"],
-  authLevel: "function",
+  authLevel: "anonymous",
+
   route: 'demo-handler/{category:alpha?}/{id:int?}',
   handler: (request: HttpRequest, context: InvocationContext): ReturnType<HttpHandler> => {
     context.log('HTTP trigger function processed a request.');
