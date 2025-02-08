@@ -37,7 +37,7 @@ jobs:
         uses: Azure/functions-action@v1
         with:
           app-name: azure-test-app
-          package: ./functionapp.zip
+          package: ./azure-test.zip
           slot-name: stage
 
       - name: Logout from Azure

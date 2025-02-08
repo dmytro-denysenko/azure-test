@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "bun run tsc",
+    "pack": "func pack",
     "start": "bun run func start"
   },
   "peerDependencies": {
