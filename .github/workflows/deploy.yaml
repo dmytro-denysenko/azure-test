@@ -47,7 +47,7 @@ jobs:
           az functionapp deployment source config-zip \
             --resource-group azure-test-app_group \
             --name azure-test-app \
-            --src-path ./azure-test.zip
+            --src ./azure-test.zip
 
       - name: Logout from Azure
         run: az logout
