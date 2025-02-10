@@ -45,7 +45,7 @@ jobs:
 
       - name: Deploy Azure Function
         run: |
-          echo pwd
+          echo $(pwd)
           
           az functionapp deployment source config-zip --resource-group "azure-test-app_group" --name "azure-test-app" --src "$(pwd)/azure-test.zip"
 
