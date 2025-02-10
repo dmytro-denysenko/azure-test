@@ -47,6 +47,8 @@ jobs:
         run: |
           echo $(pwd)
           
+          ls -la
+          
           az functionapp deployment source config-zip --resource-group "azure-test-app_group" --name "azure-test-app" --src "$(pwd)/azure-test.zip"
 
       - name: Logout from Azure
